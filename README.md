@@ -1,1 +1,0 @@
-# NewTech-Prueba

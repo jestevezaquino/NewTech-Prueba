@@ -1,0 +1,4 @@
+* Se utilizó Angular para desarrollar el frontend, Material design en los componentes y el grid de bootstrap.
+
+* Para el backend necesita rehacer la solucion para obtener las dependencias necesarias y para el 
+frontend en Angular por igual (npm i).
