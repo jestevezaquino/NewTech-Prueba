@@ -1,0 +1,59 @@
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4 mt-md-3">
+    <mat-card>
+      <br/>
+      <mat-card-header class="d-flex justify-content-center">
+        <mat-card-title>Edit book</mat-card-title>
+      </mat-card-header>
+      <mat-card-content fxLayoutAlign="center">
+           <form [formGroup]="Form">
+                <mat-form-field>
+                  <mat-label>Id</mat-label>
+                  <input formControlName="id" matInput type="number">
+                  <mat-hint class="text-danger" *ngIf="(this.Form.controls.id.dirty || this.Form.controls.id.touched) && this.Form.controls.id.invalid">Required.</mat-hint>
+                </mat-form-field>
+                <br/><br/>
+                <mat-form-field appearance="standard">
+                  <mat-label>Title</mat-label>
+                  <input formControlName="title" matInput placeholder="Insert the title of the book">
+                  <mat-hint class="text-danger" *ngIf="(this.Form.controls.title.dirty || this.Form.controls.title.touched) && this.Form.controls.title.invalid">Required.</mat-hint>
+                </mat-form-field>
+                <br/><br/>
+                <mat-form-field appearance="standard">
+                  <mat-label>Description</mat-label>
+                  <input formControlName="description" matInput placeholder="Insert a description for the book">
+                  <mat-hint class="text-danger" *ngIf="(this.Form.controls.description.dirty || this.Form.controls.description.touched) && this.Form.controls.descripton.invalid">Required.</mat-hint>
+                </mat-form-field>
+                <br/><br/>
+                <mat-form-field appearance="standard">
+                  <mat-label>PageCount</mat-label>
+                  <input formControlName="pageCount" matInput type="number">
+                  <mat-hint class="text-danger" *ngIf="(this.Form.controls.pageCount.dirty || this.Form.controls.pageCount.touched) && this.Form.controls.pageCount.invalid">Required.</mat-hint>
+                </mat-form-field>
+                <br/><br/>
+                <mat-form-field appearance="standard">
+                  <mat-label>Excerpt</mat-label>
+                  <input formControlName="excerpt" matInput placeholder="Insert an excerpt for the book">
+                  <mat-hint class="text-danger" *ngIf="(this.Form.controls.excerpt.dirty || this.Form.controls.excerpt.touched) && this.Form.controls.excerpt.invalid">Required.</mat-hint>
+                </mat-form-field>
+                <br/><br/>
+                <mat-form-field appearance="standard">
+                  <mat-label>PublishDate</mat-label>
+                  <input formControlName="publishDate" matInput placeholder="Insert a publishDate for the book">
+                  <mat-hint class="text-danger" *ngIf="(this.Form.controls.publishDate.dirty || this.Form.controls.publishDate.touched) && this.Form.controls.publishDate.invalid">Required.</mat-hint>
+                </mat-form-field>
+                <br/>
+                <mat-card-actions align="end">
+                     <button (click)="EditBook();" type="button" [disabled]="this.Form.invalid" mat-raised-button color="accent"><mat-icon>edit</mat-icon> <span> EDITAR</span></button>
+                </mat-card-actions>
+           </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="col-md-4">
+    <div class="message" *ngIf="this.Correct==true">
+      Usuario editado correctamente.
+    </div>
+  </div>
+</div>
